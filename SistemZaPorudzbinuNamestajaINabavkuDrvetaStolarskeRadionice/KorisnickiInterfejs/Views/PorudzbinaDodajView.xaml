@@ -1,0 +1,52 @@
+﻿<Window x:Class="KorisnickiInterfejs.Views.PorudzbinaDodajView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KorisnickiInterfejs.Views"
+        xmlns:all="clr-namespace:KorisnickiInterfejs.Helpers"
+        mc:Ignorable="d"
+        Title="" 
+        Height="300" Width="460" 
+        Background="Black">
+    <Window.Resources>
+        <local:InverseBooleanConverter x:Key="InverseBooleanConverterKey"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Foreground="White" FontSize="20" Margin="25 10 1 1" HorizontalAlignment="Left" FontWeight="Bold">Id</Label>
+        <TextBox x:Name="Id" Grid.Column="1" Grid.Row="0" IsReadOnly="{Binding IsIzmena}" FontSize="20" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+
+        <Label Grid.Column="0" Grid.Row="1" Foreground="White" FontSize="20" Margin="25 10 1 1" HorizontalAlignment="Left" FontWeight="Bold">Musterija</Label>
+        <ListBox ItemsSource="{Binding Options1}" SelectedItem="{Binding SelectedOption1}"
+                 Grid.Column="1" Grid.Row="1" Margin="10 10 10 -13">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <RadioButton Content="{Binding Display}" 
+                                 IsChecked="{Binding IsChecked}"
+                                 GroupName="Group">
+                    </RadioButton>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+       
+        <TextBlock Text="{Binding Path=ValidacionaGreska, Mode=OneWay}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Foreground="Red" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button x:Name="Dodaj" Grid.Row="3" Grid.Column="0"
+                Background="Transparent" Foreground="White" BorderBrush="Aqua" 
+                BorderThickness="4" FontSize="30" FontWeight="Bold" Margin="4">
+            Dodaj
+        </Button>
+        <Button x:Name="Nazad" Grid.Row="6" Grid.Column="1" Background="Transparent" Foreground="White" BorderBrush="Aqua" BorderThickness="4" FontSize="30" FontWeight="Bold" Margin="100 4 4 4">Nazad</Button>
+    </Grid>
+</Window>
