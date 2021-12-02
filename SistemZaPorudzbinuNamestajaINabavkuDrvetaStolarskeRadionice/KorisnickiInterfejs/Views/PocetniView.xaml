@@ -1,0 +1,82 @@
+﻿<Window x:Class="KorisnickiInterfejs.Views.PocetniView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KorisnickiInterfejs.Views"
+        mc:Ignorable="d"
+        Background="Black"
+        Title="" Height="450" Width="697"
+        BorderThickness="4"
+        BorderBrush="Aqua">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="PrikaziMusterija" Grid.Column="3" Grid.Row="1" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Musterija</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziPoruzbina" Grid.Column="5" Grid.Row="1" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Poruzdbina</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziStavkaPoruzbine" Grid.Column="7" Grid.Row="1" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Stavka<LineBreak/>Porudzbine</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziStavkaCenovnika" Grid.Column="1" Grid.Row="3" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Stavka<LineBreak/>Cenovnika</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziVrstaNamestaja" Grid.Column="3" Grid.Row="3" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Vrsta<LineBreak/>Namestaja</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziSegrt" Grid.Column="7" Grid.Row="3" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Segrt</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziMacioner" Grid.Column="9" Grid.Row="3" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Magacioner</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziStolar" Grid.Column="1" Grid.Row="5" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Stolar</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziZahtev" Grid.Column="3" Grid.Row="5" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Zahtev</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziVrstaDrveta" Grid.Column="5" Grid.Row="5" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Vrsta<LineBreak/>Drveta</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziDobavljacDrveta" Grid.Column="7" Grid.Row="5" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Dobavljac<LineBreak/>Drveta</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziMagacin" Grid.Column="9" Grid.Row="5" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Magacin</TextBlock>
+        </Button>
+        <Button x:Name="PrikaziFunkcije" Grid.Column="5" Grid.Row="3" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17" Foreground="Red">Funkcije</TextBlock>
+        </Button>
+
+        <Button x:Name="PrikaziRegistracija" Grid.Column="5" Grid.Row="7" BorderBrush="Aqua" BorderThickness="3" Background="Transparent" Foreground="White" >
+            <TextBlock FontSize="17">Registruj</TextBlock>
+        </Button>
+    </Grid>
+</Window>

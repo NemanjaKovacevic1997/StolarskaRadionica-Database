@@ -1,0 +1,45 @@
+﻿<Window x:Class="KorisnickiInterfejs.Views.MusterijaDodajView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KorisnickiInterfejs.Views"
+        mc:Ignorable="d"
+        Title="" 
+        Height="330" Width="460" 
+        Background="Black">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Foreground="White" FontSize="20" Margin="25 10 1 1" HorizontalAlignment="Left" FontWeight="Bold">JMBG</Label>
+        <TextBox x:Name="Jmbg" Grid.Column="1" Grid.Row="0" IsReadOnly="{Binding IsIzmena}" FontSize="20" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+
+        <Label Grid.Column="0" Grid.Row="1" Foreground="White" FontSize="20" Margin="25 10 1 1" HorizontalAlignment="Left" FontWeight="Bold">Ime</Label>
+        <TextBox x:Name="Ime" Grid.Column="1" Grid.Row="1" FontSize="20" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+
+        <Label Grid.Column="0" Grid.Row="2" Foreground="White" FontSize="20" Margin="25 10 1 1" HorizontalAlignment="Left" FontWeight="Bold">Prezime</Label>
+        <TextBox x:Name="Prezime" Grid.Column="1" Grid.Row="2" FontSize="20" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+
+        
+        <TextBlock Text="{Binding Path=ValidacionaGreska, Mode=OneWay}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Foreground="Red" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button x:Name="Dodaj" Grid.Row="4" Grid.Column="0"
+                Background="Transparent" Foreground="White" BorderBrush="Aqua" 
+                BorderThickness="4" FontSize="30" FontWeight="Bold" Margin="4">
+            Dodaj
+        </Button>
+        <Button x:Name="Nazad" Grid.Row="6" Grid.Column="1" Background="Transparent" Foreground="White" BorderBrush="Aqua" BorderThickness="4" FontSize="30" FontWeight="Bold" Margin="100 4 4 4">Nazad</Button>
+    </Grid>
+</Window>
